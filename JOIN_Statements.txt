@@ -1,0 +1,22 @@
+select * from `movies` CROSS JOIN `members`;
+
+
+
+select A.`membership_number`, B.`movie_id` 
+FROM `members` AS A 
+INNER JOIN `movies` AS B 
+ON B.`movie_id` = A.`membership_number`;
+
+
+
+select A.`membership_number`, B.`movie_id` 
+FROM `members` AS A 
+LEFT JOIN `movies` AS B 
+ON B.`movie_id` = A.`membership_number`;
+
+
+
+select A.`membership_number`, B.`movie_id` 
+FROM `members` AS A 
+RIGHT JOIN `movies` AS B
+ ON B.`movie_id` = A.`membership_number`;
